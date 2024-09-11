@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Máquinas</title>
+    <!-- Referência ao arquivo CSS externo -->
+    <link rel="stylesheet" href="styles1.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <h2>Consulta de Máquina</h2>
+        <form id="consultaForm">
+            <div class="input-group">
+                <label for="numeroPedido">Número do Pedido:</label>
+                <input type="text" id="numeroPedido" placeholder="Digite o número do pedido" required>
+            </div>
+            <button type="submit">Consultar</button>
+        </form>
+        <div id="statusOutput"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
