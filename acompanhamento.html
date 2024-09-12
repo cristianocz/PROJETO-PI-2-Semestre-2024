@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acompanhamento do Conserto</title>
+    <link rel="stylesheet" href="acompanhamento.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Acompanhamento do Conserto</h2>
+        <div class="status-info">
+            <p><strong>Número do Pedido:</strong> <span id="pedidoId">12345</span></p>
+            <p><strong>Nome do Cliente:</strong> <span id="nomeCliente">João Silva</span></p>
+            <p><strong>Máquina:</strong> <span id="maquina">Singer Modelo X</span></p>
+            <p><strong>Defeito:</strong> <span id="defeito">Não liga</span></p>
+            <p><strong>Status do Conserto:</strong> <span id="statusConserto">Em andamento</span></p>
+            <p><strong>Data Estimada de Entrega:</strong> <span id="prazoEntrega">2024-09-30</span></p>
+        </div>
+        <button onclick="atualizarStatus()">Atualizar Status</button>
+        <div id="statusAtualizacao"></div>
+    </div>
+
+    <script src="acompanhamento.js"></script>
+</body>
+</html>
+
