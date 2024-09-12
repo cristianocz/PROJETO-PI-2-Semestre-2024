@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes</title>
+
+    <!-- Aqui é onde o CSS é vinculado ao HTML -->
+    <link rel="stylesheet" href="cadastro.css"> <!-- Certifique-se de que o caminho está correto -->
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastro de Clientes</h2>
+        <form id="cadastroForm">
+            <div class="input-group">
+                <label for="nomeCliente">Nome do Cliente:</label>
+                <input type="text" id="nomeCliente" placeholder="Digite o nome do cliente" required>
+            </div>
+            <div class="input-group">
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" placeholder="Digite o endereço" required>
+            </div>
+            <div class="input-group">
+                <label for="marca">Marca da Máquina:</label>
+                <input type="text" id="marca" placeholder="Digite a marca da máquina" required>
+            </div>
+            <div class="input-group">
+                <label for="modelo">Modelo da Máquina:</label>
+                <input type="text" id="modelo" placeholder="Digite o modelo da máquina" required>
+            </div>
+            <div class="input-group">
+                <label for="defeito">Defeito:</label>
+                <input type="text" id="defeito" placeholder="Descreva o defeito" required>
+            </div>
+            <div class="input-group">
+                <label for="valor">Valor do Conserto:</label>
+                <input type="number" id="valor" placeholder="Digite o valor do conserto" required>
+            </div>
+            <div class="input-group">
+                <label for="prazo">Prazo de Entrega:</label>
+                <input type="date" id="prazo" required>
+            </div>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <div id="cadastroStatus"></div>
+    </div>
+
+    <script src="cadastro.js"></script>
+</body>
+</html>
+
