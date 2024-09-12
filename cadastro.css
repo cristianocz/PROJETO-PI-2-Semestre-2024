@@ -1,0 +1,90 @@
+/* Reset básico para remover margens e preenchimentos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa a tela toda */
+}
+
+/* Container principal */
+.container {
+    background-color: #ffffff;
+    border: 2px solid #007bff; /* Bordas azuis */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos dos grupos de entrada */
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    color: #000000;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+}
+
+input[type="number"],
+input[type="date"] {
+    color: #333;
+}
+
+/* Botão de envio */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff; /* Cor azul */
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        width: 90%;
+    }
+}
+
+#cadastroStatus {
+    margin-top: 15px;
+    color: #007bff;
+    text-align: center;
+}
