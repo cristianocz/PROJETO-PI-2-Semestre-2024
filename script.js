@@ -11,7 +11,7 @@ document.getElementById('consultaForm').addEventListener('submit', function(even
 //            <p>Previsão de Retirada: 25/08/2024</p>
 //        `;}
 //        {window.location.href = "./acompanha/acompanhamento.html";}
-        {window.location.href = "https://pi-2024-nine.vercel.app/acompanha/acompanhamento.html";}
+        {window.location = "./acompanha/acompanhamento.html";}
 
      else {
         document.getElementById('statusOutput').innerHTML = `
