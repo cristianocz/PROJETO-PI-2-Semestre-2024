@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estatus do Conserto</title>
+  <link rel="stylesheet" href="status.css">
+  <script>
+    async function buscarStatus() {
+      const response = await fetch('/status');
+      const status = await response.json();
+      
+      // Atualizar a interface com o status atual
+      document.getElementById('etapa-atual').innerText = status.status;
+    }
+
+    setInterval(buscarStatus, 5000);  // Atualiza o status a cada 5 segundos
+  </script>
+</head>
+<body onload="buscarStatus()">
+  <div class="container">
+    <h1>Estatus do Conserto</h1>
+    <h4>Acompanhe as etapas do conserto da sua máquina de costura</h4>
+    <ul class="timeline">
+      <li class="timeline">
+        <div class="icon" id="icon-recebimento"></div>
+        <details>
+          <summary>Recebimento da Máquina</summary>
+        </details>
+      </li>
+      <li class="timeline">
+        <div class="icon" id="icon-diagnostico"></div>
+        <details>
+          <summary>Diagnóstico</summary>
+        </details>
+      </li>
+      <li class="timeline">
+        <div class="icon" id="icon-pecas"></div>
+        <details>
+          <summary>Aguardando Peças</summary>
+        </details>
+      </li>
+      <li class="timeline">
+        <div class="icon" id="icon-reparo"></div>
+        <details>
+          <summary>Reparo em Andamento</summary>
+        </details>
+      </li>
+      <li class="timeline">
+        <div class="icon" id="icon-teste"></div>
+        <details>
+          <summary>Teste Final</summary>
+        </details>
+      </li>
+      <li class="timeline">
+        <div class="icon" id="icon-retirada"></div>
+        <details>
+          <summary>Pronto para Retirada</summary>
+        </details>
+      </li>
+      <li class="timeline">
+        <div class="icon" id="icon-entrega"></div>
+        <details>
+          <summary>Entrega finalizada</summary>
+        </details>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
+
