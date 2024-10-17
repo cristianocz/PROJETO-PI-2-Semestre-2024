@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #555;
+  }
+  
+  ul.timeline {
+    list-style: none;
+    padding: 0;
+    position: relative;
+  }
+  
+  ul.timeline:before {
+    content: '';
+    background: #ddd;
+    display: inline-block;
+    position: absolute;
+    left: 30px;
+    width: 2px;
+    height: 100%;
+  }
+  
+  ul.timeline > li {
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  ul.timeline > li .icon {
+    background: #ddd;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    top: 0;
+  }
+  
+  ul.timeline > li .icon.done {
+    background-color: #4CAF50;
+  }
+  
+  ul.timeline > li .icon.working {
+    background-color: #FF9800;
+  }
+  
+  ul.timeline > li .icon.pending {
+    background-color: #bbb;
+  }
+  
+  ul.timeline > li details {
+    margin-left: 50px;
+    padding: 10px;
+    background: #f1f1f1;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  ul.timeline > li details[open] {
+    background-color: #e0f7fa;
+  }
+  
