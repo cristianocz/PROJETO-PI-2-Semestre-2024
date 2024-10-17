@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atualizar Status do Conserto</title>
+  <link rel="stylesheet" href="status.css">
+  <script>
+    async function atualizarStatus(etapa) {
+      const response = await fetch('/atualizar-status', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ etapa: etapa })
+      });
+      if (response.ok) {
+        alert("Status atualizado para: " + etapa);
+      } else {
+        alert("Erro ao atualizar status.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Atualizar Status do Conserto</h1>
+    <h4>Clique para atualizar a etapa</h4>
+    <ul class="timeline">
+      <li class="timeline">
+        <div class="icon done"></div>
+        <details>
+          <summary>Recebimento da Máquina</summary>
+          <button onclick="atualizarStatus('Recebimento da Máquina')">Atualizar para Recebido</button>
+        </details>
+      </li>
+      <li class="timeline">
+        <div class="icon done"></div>
+        <details>
+          <summary>Diagnóstico</summary>
+          <button onclick="atualizarStatus('Diagnóstico')">Atualizar para Diagnóstico</button>
+        </details>
+      </li>
+      <li class="timeline">
+        <div class="icon working"></div>
+        <details>
+          <summary>Aguardando Peças</summary>
+          <button onclick="atualizarStatus('Aguardando Peças')">Atualizar para Aguardando Peças</button>
+        </details>
+      </li>
+      <li class="timeline">
+        <div class="icon pending"></div>
+        <details>
+          <summary>Reparo em Andamento</summary>
+          <button onclick="atualizarStatus('Reparo em Andamento')">Atualizar para Reparo em Andamento</button>
+        </details>
+      </li>
+      <li class="timeline">
+        <div class="icon pending"></div>
+        <details>
+          <summary>Teste Final</summary>
+          <button onclick="atualizarStatus('Teste Final')">Atualizar para Teste Final</button>
+        </details>
+      </li>
+      <li class="timeline">
+        <div class="icon pending"></div>
+        <details>
+          <summary>Pronto para Retirada</summary>
+          <button onclick="atualizarStatus('Pronto para Retirada')">Atualizar para Pronto para Retirada</button>
+        </details>
+      </li>
+      <li class="timeline">
+        <div class="icon pending"></div>
+        <details>
+          <summary>Entrega finalizada</summary>
+          <button onclick="atualizarStatus('Entrega finalizada')">Atualizar para Entrega Finalizada</button>
+        </details>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
